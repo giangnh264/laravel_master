@@ -8,7 +8,7 @@ class Test extends Controller
 {
     public function index(){
         $cache = \App\Commons\Cache\Test::getInstance();
-        $cache->set(100);
+        $cache->cache(100);
         return view('test.index');
     }
 }

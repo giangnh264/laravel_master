@@ -16,7 +16,7 @@ class Test extends Base
     static $instance;
    public function __construct(array $config)
    {
-       $config['redis_database'] = Redis::BD_CLIP;
+       $config['redis_database'] = Redis::BD_TEST;
        parent::__construct($config);
    }
 
@@ -32,8 +32,8 @@ class Test extends Base
             'id'=>'100',
             'title'=>'test',
         ];
-        $cache = self::getInstance();
-        $cache->set($id, $data);
+        $this->set($id, $data);
+//        $cache->set($id, $data);
     }
 
 }

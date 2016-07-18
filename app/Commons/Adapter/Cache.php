@@ -11,7 +11,8 @@ class Cache
         if(empty($config['type']) || empty($config['redis_database'])){
             throw new \Exception('Redis params must be set');
         }
-        $this->cache = \Illuminate\Support\Facades\Cache::store($config['type']);
+//        print_r($config);exit;
+        $this->cache = \Illuminate\Support\Facades\Cache::store($config['type'] . '.' . $config['redis_database']);
 
         $this->cache_enable = env('REDIS_ENABLE', false);
     }

@@ -12,11 +12,10 @@ use App\Commons\Adapter\Cache;
 
 class Base extends Cache
 {
-    protected $type;
     protected function __construct(array $config)
     {
-        $this->type = isset($config['type']) ?  $config['type'] : config('cache.default');
-        $config['type'] = $this->type;
+        $config['type'] = config('cache.default');
         parent::__construct($config);
     }
+
 }

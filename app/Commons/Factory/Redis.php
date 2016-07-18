@@ -12,7 +12,7 @@ use Predis\Client;
 
 class Redis
 {
-    const BD_CLIP = 'clip';
+    const BD_TEST = 'song';
     /**
      * @param $name
      * @return Client
